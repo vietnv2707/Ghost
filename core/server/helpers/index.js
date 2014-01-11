@@ -389,7 +389,7 @@ coreHelpers.meta_title = function (options) {
     if (_.isString(this.relativeUrl)) {
         if (!this.relativeUrl || this.relativeUrl === '/' || this.relativeUrl === '' || this.relativeUrl.match(/\/page/)) {
             blog = config.theme();
-            title = blog.title;
+            title = blog.title + ' - ' + blog.description;
         } else {
             title = this.post.title;
         }
